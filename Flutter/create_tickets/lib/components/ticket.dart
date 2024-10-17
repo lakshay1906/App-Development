@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Ticket extends StatefulWidget {
   const Ticket({required this.title, required this.price, super.key});
   final String title;
-  final String price;
+  final int price;
 
   @override
   State<Ticket> createState() => _TicketState();
@@ -36,7 +36,8 @@ class _TicketState extends State<Ticket> {
               children: [
                 Text(
                   '\$${widget.price}',
-                  style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                  style: const TextStyle(
+                      fontSize: 25, fontWeight: FontWeight.w600),
                 ),
               ],
             ),
